@@ -3,12 +3,9 @@ import { getTableClient } from "@/lib/azure";
 
 export async function GET() {
   try {
-
- const tableClient = getTableClient();
-    await tableClient.createTable().catch(() => {}); // create if not exists
+    const tableClient = getTableClient();
+    await tableClient.createTable().catch(() => {}); // create if not exists, ignore if already exists
     const entities = tableClient.listEntities();
-
-
 
     const items = [];
     for await (const entity of entities) {

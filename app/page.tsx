@@ -263,6 +263,7 @@ export default function Home() {
 
             <button
               type="submit"
+              suppressHydrationWarning
               disabled={submitting || !text.trim()}
               style={{
                 background: submitting ? "var(--accent-dim)" : "var(--accent)",
