@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #22263a;
+  --border: #2e3350;
+  --accent: #6c8eff;
+  --accent-dim: #3d52b5;
+  --positive: #34d399;
+  --neutral: #fbbf24;
+  --negative: #f87171;
+  --mixed: #a78bfa;
+  --text: #e2e8f0;
+  --muted: #64748b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+}
+
+.sentiment-positive { color: var(--positive); }
+.sentiment-neutral  { color: var(--neutral); }
+.sentiment-negative { color: var(--negative); }
+.sentiment-mixed    { color: var(--mixed); }
+
+.badge-positive { background: rgba(52,211,153,0.12); color: var(--positive); border: 1px solid rgba(52,211,153,0.3); }
+.badge-neutral  { background: rgba(251,191,36,0.12);  color: var(--neutral);  border: 1px solid rgba(251,191,36,0.3); }
+.badge-negative { background: rgba(248,113,113,0.12); color: var(--negative); border: 1px solid rgba(248,113,113,0.3); }
+.badge-mixed    { background: rgba(167,139,250,0.12); color: var(--mixed);    border: 1px solid rgba(167,139,250,0.3); }
