@@ -24,7 +24,7 @@ jobs:
           NODE_ENV: production
 
       - name: Zip artifact
-        run: zip -r deploy.zip . --exclude "*.git*" --exclude "node_modules/.cache/*"
+        run: zip -r deploy.zip . -x "*.git*" -x "node_modules/.cache/*" -x ".next/dev/*" -x ".next/cache/*"
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
