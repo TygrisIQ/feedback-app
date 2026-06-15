@@ -1,5 +1,5 @@
 # Feedback Pulse
-
+---
 **INTP302 Midterm Mini-Project | Group 3**
 
 A customer feedback sentiment dashboard built with Next.js, deployed on Azure App Service, using Azure AI Language for sentiment analysis and Azure Table Storage for persistence.
