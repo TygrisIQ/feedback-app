@@ -24,11 +24,11 @@ jobs:
           NODE_ENV: production
 
       - name: Zip artifact
-        run: zip -r deploy.zip . -x "*.git*" -x "node_modules/.cache/*" -x ".next/dev/*" -x ".next/cache/*"
+        run: zip -r deploy.zip . -x "*.git*" -x ".next/dev/*" -x ".next/cache/*" -x "node_modules/.cache/*"
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'feedback-pulse-hmb3h6cdgaexdges'
+          app-name: 'feedback-pulse'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: deploy.zip
